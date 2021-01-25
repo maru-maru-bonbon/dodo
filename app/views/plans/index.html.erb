@@ -1,2 +1,41 @@
-<h1>Plans#index</h1>
-<p>Find me in app/views/plans/index.html.erb</p>
+<%= render "shared/header" %>
+<div class="main">
+
+  <%# プラン一覧 %>
+  <div class='plan-contents'>
+    <ul>
+      <% @plans.each do |plan| %>
+      <li class='list'>
+        <%= link_to plan_path(plan.id), method: :get do %>
+        <div class='plan-img-content'>
+          <%= image_tag plan.image, class: "plan-img" %>
+        </div>
+        <div class='plan-info'>
+          <h3 class='plan-name'>
+            <%= plan.name %>
+          </h3>
+          <div class='plan-price'>
+            <span><%= plan.selling_price %>円<br><%= plan.shipping_charge.name %></span>
+            <div class='good-btn'>
+              <%= image_tag "goodmark.png", class:"goodmark-icon" %>
+              <span class='goodmark-count'>0</span>
+            </div>
+          </div>
+        </div>
+        <% end %>
+      </li>
+      <% end %>
+</ul>
+  </div>
+  <%# /プラン一覧 %>
+</div>
+<div class='plan-btn'>
+  <%= link_to new_plan_path do %>
+    <%= image_tag 'logo.png' , size: '185x50' ,class: "plan-btn-icon" %>
+  <% end %>
+</div>
+<%= render "shared/footer" %>
+
+
+
+</div>
