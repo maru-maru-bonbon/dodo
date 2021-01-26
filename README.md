@@ -26,9 +26,9 @@
 | name                     | string     | null: false       |
 | description              | text       | null: false       |
 | item                     | text       | null: false       |
-| week_plan                |            |                   |
-| rest_plan                |            |                   |
 | plan_price               | integer    |                   |
+| term                     | string     |                   |
+| member                   | integer    |                   |
 
 ### Association
 
