@@ -1,0 +1,11 @@
+.registration-header{
+  justify-content: center;
+  display: flex;
+  background-color: #f5f5f5;
+  padding: 20px;
+}
+
+.dodo-icon-second{
+  width: 130px;
+  height: 100px;
+}

@@ -1,0 +1,73 @@
+<header class="new-plans-header">
+プランを作成
+</header>
+<div class="plan-contents">
+
+    <div class="plan-main">
+         <h2 class="items-sell-title">プランの情報を入力</h2>
+    <%= form_with model: @plan, url: plans_path, method: :post ,local: true do |f| %>
+
+    <%= render 'shared/error_messages', model: f.object %>
+  
+    <%#画像%>
+    <div class="img-upload">
+      <div class="weight-bold-text">
+        画像
+        <span class="indispensable">必須</span>
+      </div>
+      <div class="click-upload">
+        <p>
+          クリックしてファイルをアップロード
+        </p>
+        <%= f.file_field :image, id:"item-image" %>
+        </div>
+      </div>
+    </div>
+    <%#/画像%>
+
+    <%#プラン説明%>
+    <div class="new-plans">
+      <div class="weight-bold-text">
+        プラン名
+        <span class="indispensable">必須</span>
+      </div>
+      <%= f.text_area :name, class:"plans-text", id:"plan-name", placeholder:"プラン名（必須 40文字まで)", maxlength:"40" %>
+      <div class="plans-explain">
+        <div class="weight-bold-text">
+          プランの概要
+          <span class="indispensable">必須</span>
+        </div>
+        <%= f.text_area :description, class:"plans-text", id:"plan-info", placeholder:"プランの説明（どんなプランなのか簡単に記入してください）例）このプランはプログラミング勉強をがんばるルームです！皆さん一緒にがんばりましょう！！" ,rows:"7" ,maxlength:"1000" %>
+      </div>
+    </div>
+    <%#/プラン説明%>
+
+    <%#プランで使うアイテム%>
+      <div class="plans-item">
+        <div class="weight-bold-text">
+        アイテム
+        </div>
+        <%=f.text_area :item, class:"plan-support", id:"plan-item", placeholder:"目標達成に向けて使うサービスや参考書を買いてください(特にない場合は空欄でも結構です)", maxlength:"1000" %>
+      </div>
+    <%#/プランで使うアイテム%>
+
+    <%# 目標達成までの期間とカテゴリ%>
+    <div class="plans-term">
+      <div class="weight-bold-text">商品の詳細</div>
+      <div class="form">
+        <div class="weight-bold-text">
+          カテゴリー
+          <span class="indispensable">必須</span>
+        </div>
+        <%= f.collection_select(:category_id, Category.all, :id, :name, {}, {class:"select-box", id:"item-category"}) %>
+        <div class="weight-bold-text">
+          商品の状態
+          <span class="indispensable">必須</span>
+        </div>
+        <%= f.collection_select(:condition_id, Condition.all, :id, :name, {}, {class:"select-box", id:"item-sales-status"}) %>
+      </div>
+    </div>
+    <%#/目標達成までの期間とカテゴリ %>
+    </div>
+</div>  
+

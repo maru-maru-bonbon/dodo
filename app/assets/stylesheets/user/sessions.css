@@ -1,0 +1,28 @@
+.login-btn {
+  width: 30%;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
+.login-blue-btn {
+  width: 100%;
+  border: 1px solid #00b5ad;
+  color: black;
+  line-height: 48px;
+  font-size: 14px;
+  text-decoration: none;
+  user-select: none;
+  box-shadow: inset #00b5ad 0 0 0 0;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.login-blue-btn:hover{
+  color: #fff;
+  box-shadow: inset #00b5ad 0 0 0 2em;
+}
+
+.login-flash-message {
+  text-align: center;
+  color: red;
+}
