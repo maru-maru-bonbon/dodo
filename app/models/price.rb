@@ -1,6 +1,6 @@
 class Price < ActiveHash::Base
 
-  self.date = [
+  self.data = [
     { id:1, name: "--"},
     { id:2, name: "0"},
     { id:3, name: "1000"},
