@@ -7,7 +7,7 @@ class CreatePlans < ActiveRecord::Migration[6.0]
       t.integer :category_id, null: false
       t.integer :term_id,     null: false
       t.integer :price_id,    null: false
-      t.references :user,     foreign_key: true
+      t.references :user,             foreign_key: true
 
 
       t.timestamps
