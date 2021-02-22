@@ -1,0 +1,59 @@
+<%= render "shared/header" %>
+
+<div class="plan-show">
+  <div class="plan-box">
+    <h2 class="name">
+      <%= @plan.name %>
+   </h2>
+
+    <div class="plan-explain">プランの説明</div>
+    <div class="plan-explain-box">
+      <span><%= @plan.description %></span>
+    </div>
+    <table class="detail-table">
+      <tbody>
+        <%# <tr>
+          <th class="detail-plan">プランを計画した人</th>
+        </tr> %>
+        <tr>
+          <th class="detail-plan">アイテム</th>
+          <td class="detail-item detail-value"><%= @plan.item %></td>
+        </tr>
+        <tr>
+          <th class="detail-plan">カテゴリー</th>
+          <td class="detail-value"><%= @plan.category.name %></td>
+        </tr>
+        <tr>
+          <th class="detail-plan">期間</th>
+          <td class="detail-value"><%= @plan.term.name %></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="plan-price-box">
+        <span class="detail-price"> 値段 </span>
+      <span class="plan-detail-price">
+        <%= @plan.price.name%>
+      </span>
+    </div>
+
+    <div class="three-btn">
+    <% if user_signed_in?%>
+    <%if current_user.id == @plan.user_id %> 
+    <%= link_to 'プランの編集', edit_plan_path(@plan.id), method: :get, class: "plan-edit-btn btn" %>
+    <p class='or-text'>or</p>
+    <%= link_to '削除', plan_path(@plan.id), method: :delete, class:'plan-destroy btn' %>
+    <% else  %>
+    <%= link_to 'プランに参加する', "/",class:"plan-participate btn"%>
+    <% end %>
+    <% end %>
+    </div>
+
+      <div class="goodmark-btn">
+        <%= image_tag "goodmark.png" ,class: "goodmark-icon" ,width:"20",height:"20"%>
+        <span>いいね 0</span>
+      </div>
+  </div>
+</div>
+<%= render "shared/footer" %>
+
