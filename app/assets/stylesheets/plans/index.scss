@@ -1,19 +1,21 @@
 .main{
-  background-color: rgb(235, 235, 235);
-  width: 100%;
-
+  background-color: rgb(240, 240, 240);
+  width: 100vw;
+  height: auto;
+  padding-bottom: 300px;
 }
 
-.list{
-  list-style: none;
-  position: relative;
-  background-color: #FFF;
-  display: flex;
-  flex-direction: column;
+.content{
+  display: inline-flex;
+  justify-content: space-between;
   align-items: center;
-  padding: 20vh 0 15vh 0;
-  margin: 0 5vw;
-
+  position: relative;
+  background-color: rgb(255, 255, 255);
+  width: auto;
+  height: auto;
+  border: rgb(0, 153, 255) 5px solid;
+  border-radius: 10px;
+  margin: 90px 100px 30px 90px;
 }
 
 .plan-img{
@@ -23,32 +25,30 @@
 
 .plan-info{
   color: black;
-  
+  padding: 10px 0 30px 20px;
 }
 
 .plan-name{
-  text-decoration: none;
-  padding: 2px 0;
+  margin: 0 0 10px 0;
+  font-size: 20px;
 }
 
 .plan-price{
   text-decoration: none;
   font-size: 3vh;
-
 }
 
 .plan-img-content{
-  height: 27vh;
-  width: 13vw;
-  border: black 2px solid;
+  height: 28vh;
+  width: 19vw;
 }
 
 .good-btn {
   display: flex;
   align-items: center;
   position: absolute;
-  top: 340px;
-  left: 700px;
+  top: 220px;
+  left: 200px;
 
 }
 
@@ -64,8 +64,8 @@
 }
 
 .planning-btn {
-  width: 120px;
   background: yellowgreen;
+  width: 120px;
   text-align: center;
   border-radius: 4%;
   bottom: 32px;
