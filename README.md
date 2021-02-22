@@ -84,8 +84,9 @@ dodoアプリの名前の由来は努力する(怒->do、do->する)という気
 | name                     | string     | null: false       |
 | description              | text       | null: false       |
 | item                     | text       | null: false       |
-| plan_price               | integer    |                   |
-| term                     | string     |                   |
+| price_id                 | integer    | null: false       |
+| term_id                  | integer    | null: false       |
+| ctegory_id               | integer    | null: false       |
 
 ### Association
 
