@@ -3,7 +3,9 @@ class Plan < ApplicationRecord
   belongs_to_active_hash :category
   belongs_to_active_hash :term
   belongs_to_active_hash :price
-  belongs_to :user
+  has_many :plan_users
+  has_many :users, through: :plan_users
+  accepts_nested_attributes_for :plan_users, allow_destroy: true
 
   with_options presence: true do
     validates :image, unless: :was_attached?

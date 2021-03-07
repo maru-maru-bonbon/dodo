@@ -1,0 +1,147 @@
+.plan-show{
+  display: flex;
+  justify-content: center;
+  padding: 20vh 10vw;
+}
+
+.plan-box{
+  border: 20px black solid;
+  border-radius: 10px;
+  width: 800px;
+  padding: 40px 100px 40px;
+}
+
+.name{
+  display: flex;
+  justify-content: center;
+  border-bottom: 5px darkblue solid;
+  font-size: 30px;
+  padding-bottom: 10px;
+  margin-bottom:50px ;
+}
+
+.plan-explain{
+  font-size: large;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.plan-explain-box{
+  border: 1px black solid;
+  border-radius: 5px;
+  height: 300px;
+  margin-bottom: 80px;
+  width: auto;
+}
+
+.detail-table{
+  margin: 40px 40px 0 ;
+  height: auto;
+  width: auto;
+}
+
+.detail-plan{
+  height: 50px;
+  width: 500px;
+  padding: 30px 0;
+  margin: 30px 0 0 0 ;
+}
+
+.detail-item{
+  height: 100px;
+  padding: 0px 500px 20px 0;
+  border: 1px black solid;
+  border-radius: 5px;
+}
+
+.plan-price-box{
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.plan-detail-price{
+  font-size: 40px;
+  border-bottom:5px rgb(155, 190, 255) solid;
+}
+
+.detail-price{ 
+  font-weight: bold;
+  position: absolute;
+  left: 130px;
+  top: 10px;
+}
+
+.three-btn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 40px 0 0;
+  width: auto;
+}
+
+.plan-edit-btn{
+  height: 25px;
+  position: relative;
+  font-size: 0.8em;
+  color: #00b5ad;
+  text-decoration: none;
+  user-select: none;
+  border: 1px #00b5ad solid;
+  box-shadow: inset #00b5ad 0 0 0 0;
+  transition: 0.3s;
+  cursor: pointer;
+  padding: 10px 60px 0;
+  margin-right: 40px;
+}
+
+.plan-destroy{
+  height: 25px;
+  position: relative;
+  font-size: 0.8em;
+  color: #00b5ad;
+  text-decoration: none;
+  user-select: none;
+  border: 1px #00b5ad solid;
+  box-shadow: inset #00b5ad 0 0 0 0;
+  transition: 0.3s;
+  cursor: pointer;
+  margin-left: 40px;
+  padding: 10px 80px 0;
+}
+
+.plan-participate{
+  height: 30px;
+  width: 110px;
+  position: relative;
+  font-size: 0.8em;
+  color: #00b5ad;
+  text-decoration: none;
+  user-select: none;
+  border: 1px #00b5ad solid;
+  box-shadow: inset #00b5ad 0 0 0 0;
+  transition: 0.3s;
+  cursor: pointer;
+  margin-left: 40px;
+  padding: 30px 80px 10px;
+}
+
+.btn:hover{
+  color: #fff;
+  background: #00b5ad;
+}
+
+.goodmark-btn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  margin: 50px 0 100px 0;
+  
+}
+
+.goodmark-icon{
+  height: 50px;
+  width: 50px;
+  margin: 0 30px 0;
+}
