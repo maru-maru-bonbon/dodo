@@ -1,3 +1,4 @@
+
 class Term < ActiveHash::Base
 
   self.data = [
@@ -8,4 +9,5 @@ class Term < ActiveHash::Base
     { id:5, name: "90"},
     { id:6, name: "180"},
 ]
+
 end
