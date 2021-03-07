@@ -2,36 +2,34 @@
 <div class="main">
 
   <%# プラン一覧 %>
-  <%# <div class='plan-contents'>
-    <ul> %>
-      <%# <% @plans.each do |plan| %>
-      <%# <li class='list'> %>
-        <%# <%= link_to plan_path(plan.id), method: :get do %> 
-        <%# <div class='plan-img-content'> %> 
-          <%# <%= image_tag plan.image, class: "plan-img" %>
-        <%# </div>
+      <% @plans.each do |plan| %>
+        <%= link_to plan_path(plan.id), method: :get do %>
+      <div class="content">
+        <div class='plan-img-content'>
+          <%= image_tag plan.image, class: "plan-img" %>
+        </div>
         <div class='plan-info'>
           <h3 class='plan-name'>
             <%= plan.name %>
-          <%# </h3> 
+          </h3>
           <div class='plan-price'>
-            <span><%= plan.selling_price %>円<#br><%# plan.shipping_charge.name %></span>
-            <%# <div class='good-btn'>
-              <%= image_tag "goodmark.png", class:"goodmark-icon" %>
-              <%# <span class='goodmark-count'>0</span>
+            <span><%= plan.price.name %>円</span>
+            <div class='good-btn'>
+              <%= image_tag "goodmark.png", class:"good-icon" %>
+              <span class='good-count'>0</span>
             </div>
           </div>
         </div>
-        <% end %> 
-      <%# </li>
+        <% end %>
+      </div>
       <% end %>
-   <%# </ul>
-  </div>   %>
-  <%# /プラン一覧 %>
+  <%#/ プラン一覧 %>
+
 </div>
-<div class='plan-btn'>
+<div class='planning-btn'>
+  <span class='planning-btn-text'>計画を立てる</span>
   <%= link_to new_plan_path do %>
-    <%= image_tag 'logo.png' , size: '185x50' ,class: "plan-btn-icon" %>
+    <%= image_tag 'pen.png' , size: '185x50' ,class: "planning-btn-icon" %>
   <% end %>
 </div>
 <%= render "shared/footer" %>

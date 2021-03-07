@@ -1,18 +1,18 @@
 <header class="new-plans-header">
-プランを作成
+  <%= link_to image_tag("dodo-logo.png", class:"dodo-icon-three"), "/" %>
+<span class="header-text">プランの情報を入力</span>
 </header>
 <div class="plan-contents">
 
-    <div class="plan-main">
-         <h2 class="items-sell-title">プランの情報を入力</h2>
+  <div class="plan-main">
     <%= form_with model: @plan, url: plans_path, method: :post ,local: true do |f| %>
 
     <%= render 'shared/error_messages', model: f.object %>
   
-    <%#画像%>
+    <%#プラン画像%>
     <div class="img-upload">
       <div class="weight-bold-text">
-        画像
+        プラン画像
         <span class="indispensable">必須</span>
       </div>
       <div class="click-upload">
@@ -20,10 +20,9 @@
           クリックしてファイルをアップロード
         </p>
         <%= f.file_field :image, id:"item-image" %>
-        </div>
       </div>
     </div>
-    <%#/画像%>
+    <%#/プラン画像%>
 
     <%#プラン説明%>
     <div class="new-plans">
@@ -37,7 +36,7 @@
           プランの概要
           <span class="indispensable">必須</span>
         </div>
-        <%= f.text_area :description, class:"plans-text", id:"plan-info", placeholder:"プランの説明（どんなプランなのか簡単に記入してください）例）このプランはプログラミング勉強をがんばるルームです！皆さん一緒にがんばりましょう！！" ,rows:"7" ,maxlength:"1000" %>
+        <%= f.text_area :description, class:"plans-text", id:"plan-info", placeholder:"プランの説明（どんなプランなのか簡単に記入してください）          例）このプランはプログラミング勉強をがんばるルームです！皆さん一緒にがんばりましょう！！" ,rows:"7" ,maxlength:"1000" %>
       </div>
     </div>
     <%#/プラン説明%>
@@ -45,29 +44,48 @@
     <%#プランで使うアイテム%>
       <div class="plans-item">
         <div class="weight-bold-text">
-        アイテム
+          アイテム
+          <span class="any">任意</span>
         </div>
         <%=f.text_area :item, class:"plan-support", id:"plan-item", placeholder:"目標達成に向けて使うサービスや参考書を買いてください(特にない場合は空欄でも結構です)", maxlength:"1000" %>
       </div>
     <%#/プランで使うアイテム%>
 
-    <%# 目標達成までの期間とカテゴリ%>
-    <div class="plans-term">
-      <div class="weight-bold-text">商品の詳細</div>
+    <%# 目標達成までの期間とカテゴリ,do価格について%>
+    <div class="plans-detail">
+      <div class="weight-bold-text">プランの詳細設定</div>
       <div class="form">
         <div class="weight-bold-text">
           カテゴリー
           <span class="indispensable">必須</span>
         </div>
-        <%= f.collection_select(:category_id, Category.all, :id, :name, {}, {class:"select-box", id:"item-category"}) %>
+        <%= f.collection_select(:category_id, Category.all, :id, :name, {}, {class:"select-box", id:"plan-category"}) %>
         <div class="weight-bold-text">
-          商品の状態
+          期間
           <span class="indispensable">必須</span>
         </div>
-        <%= f.collection_select(:condition_id, Condition.all, :id, :name, {}, {class:"select-box", id:"item-sales-status"}) %>
+        <%= f.collection_select(:term_id, Term.all, :id, :name, {}, {class:"select-box", id:"plan-term"}) %>
+        <div class="weight-bold-text">
+          do価格
+          <span class="indispensable">必須</span>
+        </div>
+        <div class="question-text">
+          <span>do価格について</span>
+          <a class="question" href="#">?</a>
+        </div>
+        <%= f.collection_select(:price_id, Price.all, :id, :name, {}, {class:"select-box", id:"plan-price"}) %>
+
       </div>
     </div>
-    <%#/目標達成までの期間とカテゴリ %>
+    <%#/目標達成までの期間とカテゴリ,do価格について %>
+
+    <%# 下部ボタン %>
+    <div class="decision-btn-contents">
+      <%= f.submit "プランを決定する" ,class:"plan-btn" %>
+     <br><%=link_to 'もどる', root_path, class:"back-btn" %>
     </div>
+    <%# /下部ボタン %>
+  </div>
+    <% end %>
 </div>  
 

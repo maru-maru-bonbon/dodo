@@ -1,0 +1,96 @@
+.main{
+  background-color: rgb(240, 240, 240);
+  width: 100vw;
+  height: auto;
+  padding-bottom: 300px;
+}
+
+.content{
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  background-color: rgb(255, 255, 255);
+  width: auto;
+  height: auto;
+  border: rgb(0, 153, 255) 5px solid;
+  border-radius: 10px;
+  margin: 90px 100px 30px 90px;
+}
+
+.plan-img{
+  height: 100%;
+  width: 100%;
+}
+
+.plan-info{
+  color: black;
+  padding: 10px 0 30px 20px;
+}
+
+.plan-name{
+  margin: 0 0 10px 0;
+  font-size: 20px;
+}
+
+.plan-price{
+  text-decoration: none;
+  font-size: 3vh;
+}
+
+.plan-img-content{
+  height: 28vh;
+  width: 19vw;
+}
+
+.good-btn {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 220px;
+  left: 200px;
+
+}
+
+.good-icon{
+  height: 5vh;
+  width: 5vh;
+  margin-right: 0.5vw;
+}
+
+.good-count {
+  font-size: 3vh;
+  text-decoration: none;
+}
+
+.planning-btn {
+  background: yellowgreen;
+  width: 120px;
+  text-align: center;
+  border-radius: 4%;
+  bottom: 32px;
+  right: 32px;
+  position: fixed;
+  padding: 15px;
+}
+
+.planning-btn-text {
+  color: #fff;
+  display: block;
+  font-size: 18px;
+  text-decoration: none;
+  margin-bottom: 5px;
+}
+
+.planning-btn-icon {
+  width: 40%;
+   height:30%;
+}
+
+
+
+
+
+
+
+
