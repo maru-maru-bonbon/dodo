@@ -36,6 +36,7 @@ class PlansController < ApplicationController
       :image,
       :name,
       :description,
+      :item,
       :category_id,
       :term_id,
       :price_id).
